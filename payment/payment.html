@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="payment.css">
+    <title>Payment Page</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../homesigned/home.php"><i class="fas fa-home"></i> Home</a> /
+            <a href="../AboutUs/About.html"><i class="fas fa-info-circle"></i> About</a> /
+            <a href="../ContactUs/ContactUs.html"><i class="fas fa-envelope"></i> Contact Us</a>
+           
+        </nav>
+       
+    </header>
+    
+    <!-- start: Payment -->
+    <section class="payment-section">
+        <div class="container">
+            <div class="payment-wrapper">
+                <div class="payment-left">
+                    <div class="payment-header">
+                        <div class="payment-header-icon"><i class="ri-flashlight-fill"></i></div>
+                        <div class="payment-header-title">Order Summary</div>
+                        <p class="payment-header-description"></p>
+                    </div>
+                    <div class="payment-content">
+                        <div class="payment-body">
+                            <div class="payment-plan">
+                                <div class="payment-plan-type">BID</div>
+                                <div class="payment-plan-info">
+                                    <div class="payment-plan-info-name">Bid Price</div>
+                                    <div class="payment-plan-info-price">$49</div>
+                                </div>
+                            </div>
+                            <div class="payment-summary">
+                                <div class="payment-summary-item">
+                                    <div class="payment-summary-name">Additional fee</div>
+                                    <div class="payment-summary-price">$10</div>
+                                </div>
+                                <div class="payment-summary-item">
+                                    <div class="payment-summary-name">Discount 20%</div>
+                                    <div class="payment-summary-price">-$10</div>
+                                </div>
+                                <div class="payment-summary-divider"></div>
+                                <div class="payment-summary-item payment-summary-total">
+                                    <div class="payment-summary-name">Total</div>
+                                    <div class="payment-summary-price">-$10</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-right">
+                    <form action="" class="payment-form">
+                        <h1 class="payment-title">Payment Details</h1>
+                        <div class="payment-method">
+                            <input type="radio" name="payment-method" id="method-1" value="visa" checked>
+                            <label for="method-1" class="payment-method-item">
+                                <img src="visa.png" alt="Visa">
+                            </label>
+                            <input type="radio" name="payment-method" id="method-2" value="mastercard">
+                            <label for="method-2" class="payment-method-item">
+                                <img src="mastercard.png" alt="MasterCard">
+                            </label>
+                            <input type="radio" name="payment-method" id="method-3" value="paypal">
+                            <label for="method-3" class="payment-method-item">
+                                <img src="paypal.png" alt="PayPal">
+                            </label>
+                            <input type="radio" name="payment-method" id="method-4" value="bank-transfer">
+                            <label for="method-4" class="payment-method-item">
+                                <img src="bank.png" alt="Bank Transfer">
+                            </label>
+                        </div>
+
+                        <!-- Card Payment Form (Visa, MasterCard) -->
+                        <div id="card-payment-fields">
+                            <div class="payment-form-group">
+                                <input type="text" placeholder=" " class="payment-form-control" id="card-number">
+                                <label for="card-number" class="payment-form-label payment-form-label-required">Card Number</label>
+                            </div>
+                            <div class="payment-form-group-flex">
+                                <div class="payment-form-group">
+                                    <input type="date" placeholder=" " class="payment-form-control" id="expiry-date">
+                                    <label for="expiry-date" class="payment-form-label payment-form-label-required">Expiry Date</label>
+                                </div>
+                                <div class="payment-form-group">
+                                    <input type="text" placeholder=" " class="payment-form-control" id="cvv">
+                                    <label for="cvv" class="payment-form-label payment-form-label-required">CVV</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PayPal Email Form -->
+                        <div id="paypal-fields" style="display: none;">
+                            <div class="payment-form-group">
+                                <input type="email" placeholder=" " class="payment-form-control" id="paypal-email">
+                                <label for="paypal-email" class="payment-form-label payment-form-label-required">PayPal Email Address</label>
+                            </div>
+                        </div>
+
+                        <!-- Bank Transfer Form -->
+                        <div id="bank-transfer-fields" style="display: none;">
+                            <div class="payment-form-group">
+                                <input type="text" placeholder=" " class="payment-form-control" id="bank-name">
+                                <label for="bank-name" class="payment-form-label payment-form-label-required">Bank Name</label>
+                            </div>
+                            <div class="payment-form-group">
+                                <input type="text" placeholder=" " class="payment-form-control" id="account-number">
+                                <label for="account-number" class="payment-form-label payment-form-label-required">Account Number</label>
+                            </div>
+                            <div class="payment-form-group">
+                                <input type="text" placeholder=" " class="payment-form-control" id="bank-swift">
+                                <label for="bank-swift" class="payment-form-label payment-form-label-required">SWIFT/BIC Code</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="payment-form-submit-button"><i class="ri-wallet-line"></i> Pay</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end: Payment -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const method1 = document.getElementById('method-1'); // Visa
+            const method2 = document.getElementById('method-2'); // MasterCard
+            const method3 = document.getElementById('method-3'); // PayPal
+            const method4 = document.getElementById('method-4'); // Bank Transfer
+
+            const cardPaymentFields = document.getElementById('card-payment-fields');
+            const paypalFields = document.getElementById('paypal-fields');
+            const bankTransferFields = document.getElementById('bank-transfer-fields');
+
+            // Function to toggle fields based on payment method
+            function togglePaymentFields() {
+                if (method1.checked || method2.checked) {
+                    // Show card payment fields for Visa and MasterCard
+                    cardPaymentFields.style.display = 'block';
+                    paypalFields.style.display = 'none';
+                    bankTransferFields.style.display = 'none';
+                } else if (method3.checked) {
+                    // Show PayPal fields
+                    cardPaymentFields.style.display = 'none';
+                    paypalFields.style.display = 'block';
+                    bankTransferFields.style.display = 'none';
+                } else if (method4.checked) {
+                    // Show Bank Transfer fields
+                    cardPaymentFields.style.display = 'none';
+                    paypalFields.style.display = 'none';
+                    bankTransferFields.style.display = 'block';
+                }
+            }
+
+            // Attach event listeners to payment methods
+            method1.addEventListener('change', togglePaymentFields);
+            method2.addEventListener('change', togglePaymentFields);
+            method3.addEventListener('change', togglePaymentFields);
+            method4.addEventListener('change', togglePaymentFields);
+
+            // Initial toggle based on the default selection
+            togglePaymentFields();
+        });
+    </script>
+
+</body>
+</html>

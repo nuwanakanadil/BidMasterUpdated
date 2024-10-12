@@ -1,0 +1,186 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(#021024, #052659, #5483B3, #7da0ca, #c1e8ff);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    
+}
+
+/* Nav Bar */
+
+.logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 5px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    
+}
+nav a:hover
+{
+    color: #0099ff;
+    font-weight: bold;
+}
+nav a i {
+    margin-right: 5px;
+}
+
+/* Main content styling */
+.class1 {
+    background-color: white;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    text-align: center;
+}
+
+.class1 h2 {
+    color: #f15a29;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.class1 p {
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.class1 p b {
+    color: #333;
+}
+
+.class1 video {
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* Link styling */
+a {
+    color: #f15a29;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 20px 0;
+    background: transparent;
+    border-top: 1px solid #ccc;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.footer-content nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0;
+    align-items: center;
+}
+.footer-nav ul
+{
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.footer-content nav ul li {
+    margin-right: 15px;
+   
+}
+
+.footer-content nav ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+   
+}
+.social-icon {
+    color: #000000;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+    
+}
+.social-icon:hover {
+    color: #000;
+}
+.logo-container
+{
+    text-align: right;
+    margin-top: -50px;
+}
+.footer-logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 5px;
+    
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+.legal-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .class1 {
+        padding: 20px;
+    }
+
+    .class1 h2 {
+        font-size: 24px;
+    }
+
+    .class1 p {
+        font-size: 14px;
+    }
+}

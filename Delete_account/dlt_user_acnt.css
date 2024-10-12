@@ -1,0 +1,16 @@
+.forgot-psw
+{
+    color: #007bff;
+    font-weight: bold;
+}
+.delete-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #0088ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 40px;
+}

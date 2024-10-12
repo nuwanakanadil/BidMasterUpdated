@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+body {
+    background: #1c1c1c;
+    color: #fff;
+
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 5px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    
+}
+nav a:hover
+{
+    color: #6d5e5e;
+    font-weight: bold;
+}
+nav a i {
+    margin-right: 5px;
+}
+
+.sign-buttons .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.sign-buttons .btn:hover {
+    background-color: #0056b3;
+}
+#signup
+{
+    background-color: white;
+    color: #007bff;
+}
+#signup:hover
+{
+    background-color: #aeb8c4;
+}
+
+section {
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 3rem;
+    margin: 2rem 0rem;
+}
+
+.faq {
+    max-width: 700px;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question h3 {
+    font-size: 1.8rem;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+}
+
+.answer p {
+    padding-top: 1rem;
+    line-height: 1.6;
+    font-size: 1.4rem;
+}
+
+.faq.active .answer {
+    max-height: 300px;
+    animation: fade 1s ease-in-out;
+}
+
+.faq.active svg {
+    transform: rotate(180deg);
+}
+
+svg {
+    transition: transform .5s ease-in;
+}
+
+.note {
+    background: linear-gradient(135deg, rgba(34, 193, 195, 0.2), rgba(253, 187, 45, 0.2)); /* Gradient background */
+    color: #ffffff; /* Dark text color for better readability */
+    border-left: 6px solid #22c1c3; /* Accent border on the left */
+    padding: 2rem; /* Padding for space around the text */
+    margin-top: 2rem; /* Space from the previous content */
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    text-align: left; /* Left-align text for a cleaner look */
+    font-size: 1.2rem; /* Base font size */
+    position: relative; /* Positioning for the icon */
+    overflow: hidden; /* Prevent overflow of content */
+}
+
+footer {
+    margin-top: 30px;
+    padding: 20px 0;
+    background: transparent;
+    border-top: 1px solid #ccc;
+    position: relative; /* Make footer content stack correctly */
+    overflow: hidden; /* Avoid overflow issues */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    flex-wrap: wrap; /* Allow elements to wrap and avoid overlap */
+}
+
+.footer-nav ul {
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+    justify-content: center;
+    padding-left: 0; /* Remove default padding from the ul */
+    margin: 0;
+}
+
+.footer-nav ul li {
+    margin-right: 15px;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icon {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #302525;
+}
+
+.logo-container {
+    text-align: right;
+    margin-top: 20px; /* Ensure enough space between the logo and other content */
+}
+
+.footer-logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 5px;
+    display: block; /* Prevent inline-block issues */
+    margin-left: auto; /* Align to the right */
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 20px;
+    clear: both; /* Ensure no floating issues in footer */
+}
+
+.legal-links {
+    margin-top: 10px;
+}
+
+.legal-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.legal-links a:hover {
+    text-decoration: underline;
+}
+
+/* Optional: Make the note slightly larger on smaller screens */
+@media (max-width: 768px) {
+    .note {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+}
+
+
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+

@@ -1,0 +1,34 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+header {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    z-index: 100;
+}
+.profile-btn {
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #031f2b;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
