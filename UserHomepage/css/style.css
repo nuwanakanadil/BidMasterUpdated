@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    text-transform: capitalize;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: linear-gradient(135deg, #001d3f, #003566, #005f73, #0a9396, #94d2bd);
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #5f84a2;
+}
+
+.sign-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #5f84a2;
+    border: none;
+    border-radius: 50px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #3d3c3d;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.container .title {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.container .products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+/* Color for odd and even products */
+.container .products-container .product:nth-child(odd) {
+    background-color: #001d3f; /* Dark blue */
+    color: #ffffff; /* White text */
+}
+
+.container .products-container .product:nth-child(even) {
+    background-color: #0077b6; /* Light blue */
+    color: #001d3f; /* Dark blue text */
+}
+
+.container .products-container .product {
+    text-align: center;
+    padding: 3rem 2rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    outline: .1rem solid #ccc;
+    cursor: pointer;
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.container .products-container .product:hover {
+    transform: translateY(-10px) scale(1.05);
+    outline: .2rem solid #fff;
+}
+
+.container .products-container .product img {
+    width: 100%; /* Ensure the image takes up the full width of its container */
+    height: 25rem; /* Set a consistent height for all images */
+    object-fit: cover; /* Ensures the image covers the entire area without distorting its aspect ratio */
+    border-radius: 8px; /* Optional: Add some border radius for better visual appeal */
+}
+
+.container .products-container .product h3 {
+    padding: .5rem 0;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.container .products-container .product .price {
+    font-size: 2rem;
+}
+
+/* Time styling */
+.product .time {
+    color: #ffae00; /* Yellow */
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.products-preview .time {
+    color: #ffae00; /* Yellow */
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.products-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.products-preview .preview {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: #005f73; /* Dark blue */
+    position: relative;
+    margin: 2rem;
+    width: 40rem;
+    border-radius: 10px;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+.products-preview .preview.active {
+    display: inline-block;
+}
+
+.products-preview .preview img {
+    height: 30rem;
+    width: 100%; /* Ensure preview images take full width */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 5px;
+}
+
+.products-preview .preview .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 4rem;
+}
+
+.products-preview .preview .fa-times:hover {
+    transform: rotate(90deg);
+    color: #e74c3c;
+}
+
+.products-preview .preview h3 {
+    color: #fff; /* White */
+    padding: .5rem 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.products-preview .preview p {
+    line-height: 1.5;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: #fff; /* White */
+}
+
+.products-preview .preview .price {
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    color: #27ae60; /* Green */
+}
+
+.products-preview .preview .buttons {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.products-preview .preview .buttons a {
+    flex: 1 1 16rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+    border: .1rem solid #27ae60;
+    background-color: #27ae60;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.products-preview .preview .buttons a:hover {
+    background-color: #2ecc71;
+}
+
+.products-preview .preview .buttons a.cart:hover {
+    background: #444;
+}
+
+.products-preview .preview .buttons a.buy:hover {
+    background: #111;
+}
+
+/* Style for the bid form input field */
+.bid-form input[type="number"] {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.8rem;
+    border: 2px solid #27ae60;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    transition: border-color 0.3s ease;
+}
+
+.bid-form input[type="number"]:focus {
+    border-color: #2ecc71;
+}
+
+/* Updated Place Bid button */
+.place-bid {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(45deg, #27ae60, #2ecc71);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for the Place Bid button */
+.place-bid:hover {
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.place-bid:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.winner {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #ffae00; /* Yellow background */
+    color: #001d3f; /* Dark blue text for contrast */
+    font-size: 1.6rem; /* Slightly smaller font size */
+    font-weight: 600; /* Make the text bolder */
+    text-align: center; /* Center the text */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+}
+
+.winner:hover {
+    background-color: #ffba33; /* Slightly brighter yellow on hover */
+    transform: scale(1.05); /* Scale up the element a bit on hover */
+}
+
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width:768px) {
+    .products-preview .preview img {
+        height: 25rem;
+    }
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+/* Animation for preview fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

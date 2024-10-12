@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>BidMaster</title>
+    <link rel="stylesheet" href="home.css">
+    <script>
+        function toggleVideoSound() {
+            const video = document.getElementById('background-video');
+            const soundButton = document.querySelector('.sound-btn');
+
+            if (video.muted) {
+                video.muted = false; // Unmute the video
+                soundButton.innerText = 'Mute Sound'; // Change button text
+            } else {
+                video.muted = true; // Mute the video
+                soundButton.innerText = 'Play with Sound'; // Revert button text
+            }
+        }
+
+        //function to load sign up page
+        function RedirectToSignup() {
+            window.location.href = 'Signup/signup.html';
+        }
+
+        function RedirectToSignin() {
+            window.location.href = 'Login/Login.html';
+        }
+    </script>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+        <header>
+            <nav>
+                <a href="home.html"><i class="fas fa-home"></i> Home</a> /
+                <a href="AboutUs/About.html"><i class="fas fa-info-circle"></i> About</a> /
+                <a href="ContactUs/ContactUs.html"><i class="fas fa-envelope"></i> Contact Us</a>
+            </nav>
+            <div class="sign-buttons">
+                <button class="btn" id="signup" onclick="RedirectToSignup()">Sign Up</button>
+                <button class="btn" id="signin" onclick="RedirectToSignin()">Sign In</button>
+            </div>
+        </header>
+        <hr>
+        <h1>Welcome to <span class="highlight">BidMaster</span></h1>
+        <p>Unlock the Power of Online Auctions with <span class="highlight">BidMaster!</span></p>
+        <a href="UserHomepage/index.php" class="browse-item-btn">Browse Items</a><br>
+        <a href="Login/Login.html" class="switch-seller-btn">Switch Seller</a><br>
+        
+    </div>
+    <button onclick="toggleVideoSound()" class="sound-btn">Play with Sound</button>
+</body>
+</html>

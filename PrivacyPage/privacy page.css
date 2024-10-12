@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+body {
+    background-color: #f0faff; /* Light background for contrast */
+    color: #333; /* Dark text for readability */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 5px;
+}
+
+nav a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 15px;
+    
+}
+nav a:hover
+{
+    color: #333;
+    font-weight: bold;
+}
+nav a i {
+    margin-right: 5px;
+}
+
+.sign-buttons .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.sign-buttons .btn:hover {
+    background-color: #0056b3;
+}
+#signup
+{
+    background-color: white;
+    color: #007bff;
+}
+#signup:hover
+{
+    background-color: #aeb8c4;
+}
+
+/* Main Content */
+main {
+    background-color: white; /* White background for content */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin: 20px;
+}
+
+.breadcrumbs p {
+    margin-bottom: 10px;
+    font-size: 0.9rem; 
+    color: #666; /* Lighter color for breadcrumbs */
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+h3 {
+    background-color: #4a90e2; /* Blue background for section headers */
+    color: white; /* White text for contrast */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-section,
+.right-section {
+    width: 45%; /* Adjust width for sections */
+}
+
+p {
+    margin-top: 10px;
+    font-size: 1rem;
+    line-height: 1.6; /* Better line height for readability */
+}
+
+footer {
+    margin-top: 30px;
+    padding: 20px 0;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ccc;
+    position: relative; /* Make footer content stack correctly */
+    overflow: hidden; /* Avoid overflow issues */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    flex-wrap: wrap; /* Allow elements to wrap and avoid overlap */
+}
+
+.footer-nav ul {
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+    justify-content: center;
+    padding-left: 0; /* Remove default padding from the ul */
+    margin: 0;
+}
+
+.footer-nav ul li {
+    margin-right: 15px;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icon {
+    color: #666;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #000;
+}
+
+.logo-container {
+    text-align: right;
+    margin-top: 20px; /* Ensure enough space between the logo and other content */
+}
+
+.footer-logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 5px;
+    display: block; /* Prevent inline-block issues */
+    margin-left: auto; /* Align to the right */
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
+    clear: both; /* Ensure no floating issues in footer */
+}
+
+.legal-links {
+    margin-top: 10px;
+}
+
+.legal-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.legal-links a:hover {
+    text-decoration: underline;
+}
+
